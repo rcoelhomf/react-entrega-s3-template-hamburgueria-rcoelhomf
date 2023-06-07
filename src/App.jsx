@@ -5,6 +5,7 @@ import { GlobalStyle } from './Styles/globalStyles'
 import { Reset } from './Styles/reset'
 import { List } from './List'
 import { Modal } from './Dialog'
+import { StyledLoading } from './App'
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
       <Reset />
       <GlobalStyle />
       <Header setHandleSearch={setHandleSearch} setHandleModal={setHandleModal} cartProducts={cartProducts} />
-      {isLoading ? <div>Loading...</div> : null}
+      {isLoading ? <StyledLoading>Loading...</StyledLoading> : null}
       <List products={filteredProducts} setCartProducts={setCartProducts} cartProducts={cartProducts} />
       {handleModal ? <Modal setHandleModal={setHandleModal} cartProducts={cartProducts} setCartProducts={setCartProducts} /> : null}
     </>
