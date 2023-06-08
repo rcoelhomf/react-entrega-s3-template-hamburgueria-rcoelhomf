@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { api } from './services/api'
-import { Header } from './Header'
+import { Header } from './Components/Header'
 import { GlobalStyle } from './Styles/globalStyles'
 import { Reset } from './Styles/reset'
-import { List } from './List'
-import { Modal } from './Dialog'
+import { List } from './Components/List'
+import { Modal } from './Components/Dialog'
 import { StyledLoading } from './App'
 
 function App() {

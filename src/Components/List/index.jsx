@@ -1,7 +1,20 @@
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 import { BottonDiv, ImgDiv, StyledLi, StyledList } from "./style"
-import { StyledBodySec, StyledCaption, StyledH3 } from '../Styles/Typography'
+import { StyledBodySec, StyledCaption, StyledH3 } from '../../Styles/Typography'
 
 export const List = ({ products, setCartProducts, cartProducts }) => {
+
+    const notify = () => toast.error('Produto ja adicionado', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    })
 
     const addToCart = (itemList) => {
         const newProduct = products.find(item => item.id == itemList.id)
@@ -9,7 +22,7 @@ export const List = ({ products, setCartProducts, cartProducts }) => {
         if(!findOnCart){
             setCartProducts((cartProducts) => [...cartProducts, newProduct])
         } else {
-            alert('Esse produto já foi adicionado no carrinho')
+            notify()
         }
     }
 
@@ -28,6 +41,17 @@ export const List = ({ products, setCartProducts, cartProducts }) => {
                     </BottonDiv>
                 </StyledLi>
             ))}
+            <ToastContainer 
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored" ></ToastContainer>
         </StyledList>
     )
 }

@@ -1,8 +1,8 @@
-import thrash from '../assets/thrash.png'
+import thrash from '../../assets/thrash.png'
 
 import { useRef, useEffect } from 'react'
 import { BackgorundModal, BottonModalDiv, ModalBox, ModalButton, ModalUl, UlLi, UpperDiv } from './style'
-import { StyledBodySec, StyledH3 } from '../Styles/Typography'
+import { StyledBodySec, StyledH3 } from '../../Styles/Typography'
 
 export const Modal = ({ setHandleModal, cartProducts, setCartProducts }) => {
 

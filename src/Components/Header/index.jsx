@@ -1,6 +1,6 @@
-import search from '../assets/Search.png'
-import cart from '../assets/Cart.png'
-import logo from '../assets/MaskGroup.png'
+import search from '../../assets/Search.png'
+import cart from '../../assets/Cart.png'
+import logo from '../../assets/MaskGroup.png'
 import { useState } from 'react'
 import { StyledBigDiv, StyledDivCart, StyledForm, StyledHeader, StyledImgCart } from './style'
 
