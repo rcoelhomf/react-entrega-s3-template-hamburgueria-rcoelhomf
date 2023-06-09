@@ -7,7 +7,7 @@ import { List } from './Components/List'
 import { Modal } from './Components/Dialog'
 import { StyledLoading } from './App'
 
-function App() {
+const App = () => {
 
   const [handleModal, setHandleModal] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
