@@ -15,15 +15,15 @@ export const Header = ({ setHandleSearch, setHandleModal, cartProducts }) => {
     return (
         <StyledHeader>
             <StyledBigDiv>
-                <img src={logo} alt="carrinho de compras" />
+                <img src={logo} alt='carrinho de compras' />
                 <StyledDivCart>
-                    <StyledImgCart onClick={() => {setHandleModal(true)}} src={cart} alt="carrinho de compras" />
+                    <StyledImgCart onClick={() => {setHandleModal(true)}} src={cart} alt='carrinho de compras' />
                     <span>{cartProducts.length}</span>
                 </StyledDivCart>
             </StyledBigDiv>
                 <StyledForm onSubmit={submit}>
-                    <input onChange={(e) => {setType(e.target.value)}} placeholder='Digitar pesquisa' type="text" />
-                    <button><img src={search} alt="imagem de uma lupa" /></button>
+                    <input onChange={(e) => {setType(e.target.value)}} placeholder='Digitar pesquisa' type='text' />
+                    <button><img src={search} alt='imagem de uma lupa' /></button>
                 </StyledForm>
         </StyledHeader>
     )

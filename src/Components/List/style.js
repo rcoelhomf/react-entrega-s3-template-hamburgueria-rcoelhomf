@@ -17,7 +17,7 @@ export const StyledList = styled.ul`
     }
 
     li {
-        min-width: 300px;
+        width: 300px;
         height: 346px;
 
         display: flex;
@@ -27,6 +27,10 @@ export const StyledList = styled.ul`
 
         border: 2px solid var(--color-grey-100);
         border-radius: 5px;
+
+        @media (min-width: 769px) {
+            width: 21%;
+        }
     }
     
     li:hover {

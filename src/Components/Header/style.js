@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const StyledHeader = styled.header`
     width: 100vw;
-    height: 160px;
+    height: 160px; 
     padding: 0 10vw;
     padding-bottom: 10px;
     gap: 30px;

@@ -55,16 +55,16 @@ export const Modal = ({ setHandleModal, cartProducts, setCartProducts }) => {
                     {cartProducts.map(item => (
                         <UlLi key={item.id}>
                             <div>
-                                <img src={item.img} alt="" />
+                                <img src={item.img} alt='' />
                                 <StyledH3>{item.name}</StyledH3>
                             </div>
-                            <img onClick={() => {filterArray(item.id)}} src={thrash} alt="" />
+                            <img onClick={() => {filterArray(item.id)}} src={thrash} alt='' />
                         </UlLi>
                     ))}
                 </ModalUl>
                 <BottonModalDiv>
                     <StyledBodySec font='var(--color-grey-600)'>Total</StyledBodySec>
-                    <StyledBodySec font='var(--color-grey-300)'>{total.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}</StyledBodySec>
+                    <StyledBodySec font='var(--color-grey-300)'>{total.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</StyledBodySec>
                 </BottonModalDiv>
                 <ModalButton onClick={() => {setCartProducts([])}}>Remover todos</ModalButton>
             </ModalBox>
