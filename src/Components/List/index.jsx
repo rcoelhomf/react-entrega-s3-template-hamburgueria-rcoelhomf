@@ -1,6 +1,6 @@
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { BottonDiv, ImgDiv, StyledLi, StyledList } from './style'
+import { BottonDiv, ImgDiv, StyledList } from './style'
 import { StyledBodySec, StyledCaption, StyledH3 } from '../../Styles/Typography'
 
 export const List = ({ products, setCartProducts, cartProducts }) => {
@@ -29,7 +29,7 @@ export const List = ({ products, setCartProducts, cartProducts }) => {
     return (
         <StyledList>
             {products.map(item => (
-                <StyledLi key={item.id}>
+                <li key={item.id}>
                     <ImgDiv>
                         <img src={item.img} alt='' /> 
                     </ImgDiv>
@@ -39,7 +39,7 @@ export const List = ({ products, setCartProducts, cartProducts }) => {
                         <StyledBodySec font='var(--color-color-primary)'>{item.price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</StyledBodySec>
                         <button onClick={(e) => {addToCart(e.target)}} id={item.id}>Adicionar</button>
                     </BottonDiv>
-                </StyledLi>
+                </li>
             ))}
             <ToastContainer 
             position='top-right'
