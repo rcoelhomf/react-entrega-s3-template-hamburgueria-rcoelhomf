@@ -17,7 +17,7 @@ export const StyledList = styled.ul`
     }
 
     li {
-        width: 300px;
+        min-width: 300px;
         height: 346px;
 
         display: flex;
@@ -37,8 +37,6 @@ export const StyledList = styled.ul`
         border: 2px solid var(--color-color-primary);
     } 
 `
-
-export const StyledLi = styled.li``
 
 export const ImgDiv = styled.div`
     width: 100%;
